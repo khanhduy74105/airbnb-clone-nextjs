@@ -39,7 +39,7 @@ export default function TripsClient({
         .finally(()=>{
             setDeletingId('')
         })
-    },[])
+    },[router])
     return (
         <Container>
             <Heading

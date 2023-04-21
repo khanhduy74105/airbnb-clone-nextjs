@@ -65,7 +65,7 @@ export default function RentModal() {
     const Map = useMemo(() => dynamic(() => import('../Map'), {
         ssr: false
     }),
-        [location])
+        [])
     const setCustomValue = (id: string, value: any) => {
         setValue(id, value, {
             shouldDirty: true,
@@ -96,10 +96,10 @@ export default function RentModal() {
                 setStep(STEPS.CATEGORY)
                 rentModal.onClose()
             })
-            .catch(()=>{
+            .catch(() => {
                 toast.error('Something went wrong.')
             })
-            .finally(()=>{
+            .finally(() => {
                 setIsLoading(false)
             })
     }
