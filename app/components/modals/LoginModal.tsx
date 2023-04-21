@@ -28,7 +28,7 @@ export default function LoginModal() {
     const toggle = useCallback(() => {
         loginModal.onClose()
         registerModal.onOpen()
-    },[registerModal, loginModal])
+    }, [registerModal, loginModal])
     const {
         register,
         handleSubmit,
@@ -114,7 +114,7 @@ export default function LoginModal() {
           font-light
         "
             >
-                <p>Don't have an account?
+                <p>Don&apos;t have an account?
                     <span
                         onClick={toggle}
                         className="
